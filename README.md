@@ -21,7 +21,7 @@ PPGeo is a fully self-supervised driving policy pre-training framework to learn 
 If you find our repo or our paper useful, please use the following citation:
 
 ```
-@article{PPGeo,
+@article{wu2022PPGeo,
  title={Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling}, 
  author={Penghao Wu and Li Chen and Hongyang Li and Xiaosong Jia and Junchi Yan and Yu Qiao},
  journal={arXiv preprint arXiv:},
