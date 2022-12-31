@@ -14,6 +14,11 @@ This repository contains the pytorch implementation for the paper [Policy Pre-tr
 
 PPGeo is a fully self-supervised driving policy pre-training framework to learn from unlabeled driving videos. The code and pre-trained model are coming soon!
 
+## Pre-trained Models
+
+| [Visual Encoder](https://drive.google.com/file/d/1GAeLgT3Bd_koN9bRPDU1ksMpMlWfGXbE/view?usp=sharing) | [DepthNet](https://drive.google.com/file/d/1bzRVs97KbPtfXE-1Iwe60bUD4i0JXxhh/view?usp=sharing) | [PoseNet](https://drive.google.com/file/d/1sDeuJIvfC01NFyuLFyPI3-yihQRsmLY_/view?usp=sharing) |
+|:--------------:|:--------:|:-------:|
+
 
 ## Citation
 
