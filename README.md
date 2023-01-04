@@ -8,9 +8,9 @@
 > Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling 
 >
 > - [Penghao Wu](https://scholar.google.com/citations?user=9mssd5EAAAAJ&hl=en), [Li Chen](https://scholar.google.com/citations?user=ulZxvY0AAAAJ&hl=en&authuser=1), [Hongyang Li](https://lihongyang.info/), [Xiaosong Jia](https://jiaxiaosong1002.github.io/), [Junchi Yan](https://thinklab.sjtu.edu.cn/), [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/)
-> - [arXiv Paper]()
+> - [arXiv Paper](https://arxiv.org/abs/2301.01006)
 
-This repository contains the pytorch implementation for the paper [Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling]().
+This repository contains the pytorch implementation for the paper [Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling](https://arxiv.org/abs/2301.01006).
 
 PPGeo is a fully self-supervised driving policy pre-training framework to learn from unlabeled driving videos. The code and pre-trained model are coming soon!
 
@@ -28,7 +28,7 @@ If you find our repo or our paper useful, please use the following citation:
 @article{wu2022PPGeo,
  title={Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling}, 
  author={Penghao Wu and Li Chen and Hongyang Li and Xiaosong Jia and Junchi Yan and Yu Qiao},
- journal={arXiv preprint arXiv:},
+ journal={arXiv preprint arXiv:2301.01006},
  year={2022},
 }
 ```
