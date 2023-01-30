@@ -29,7 +29,42 @@ This repository contains the pytorch implementation for PPGeo in the paper [Poli
 
 ## Get Started
 
-The code and instructions are coming soon!
+Clone the repo and build the environment
+
+```
+git clone https://github.com/OpenDriveLab/PPGeo.git
+cd PPGeo
+conda env create -f environment.yml --name PPGeo
+conda activate PPGeo
+```
+
+Download the driving video dataset based on the instructions in [ACO](https://github.com/metadriverse/ACO)
+
+Make a symlink to the dataset root
+
+```
+ln -s DATA_ROOT data
+```
+
+Preprocess the data
+
+```
+python ytb_data_preprocess.py
+```
+
+## Training
+
+First stage training
+
+```
+python train.py --id ppgeo_stage1_log --stage 1
+```
+
+Second stage training
+
+```
+python train.py --id ppgeo_stage2_log --stage 2 --ckpt PATH_TO_STAGE1_CKPT
+```
 
 
 ## Citation
@@ -47,3 +82,7 @@ If you find our repo or our paper useful, please use the following citation:
 
 ## License
 All code within this repository is under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+## Acknowlegement
+Our code is based on [monodepth2](https://github.com/nianticlabs/monodepth2)
+
