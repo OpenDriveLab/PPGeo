@@ -24,13 +24,13 @@ for folder_index in tqdm.tqdm(range(88)):
     end = imgs[-1]
     tmp_path = []
     for i in range(length//interval):
-        if i < 6:
+        if i < 3:
             continue
         img_name = "{}.jpg".format(i*interval + start)
         tmp_path.append(os.path.join("dir-{}".format(folder_index),img_name))
-    prev_path += tmp_path[:-4]
-    cur_path += tmp_path[2:-2]
-    next_path += tmp_path[4:]
+    prev_path += tmp_path[:-2]
+    cur_path += tmp_path[1:-1]
+    next_path += tmp_path[2:]
 
     video_i = folder_index if folder_index < 65 else folder_index-1
     video_idx += [video_i] * len(tmp_path[:-1])
@@ -38,7 +38,7 @@ for folder_index in tqdm.tqdm(range(88)):
 ytb_meta = {"cur_path":cur_path, "next_path":next_path, "prev_path":prev_path, "video_idx":video_idx}
 
 num_samples = len(cur_path)
-num_train_samples = int(len(cur_path)*0.8)
+num_train_samples = int(len(cur_path)*0.9)
 ytb_meta_train = {"cur_path":cur_path[:num_train_samples], "next_path":next_path[:num_train_samples], "prev_path":prev_path[:num_train_samples], "video_idx":video_idx[:num_train_samples]}
 ytb_meta_val = {"cur_path":cur_path[num_train_samples:], "next_path":next_path[num_train_samples:], "prev_path":prev_path[num_train_samples:], "video_idx":video_idx[num_train_samples:]}
 np.save("ytb_meta_trip", ytb_meta, allow_pickle=True)
