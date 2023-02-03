@@ -33,7 +33,7 @@ for folder_index in tqdm.tqdm(range(88)):
     next_path += tmp_path[2:]
 
     video_i = folder_index if folder_index < 65 else folder_index-1
-    video_idx += [video_i] * len(tmp_path[:-1])
+    video_idx += [video_i] * len(tmp_path[:-2])
 
 ytb_meta = {"cur_path":cur_path, "next_path":next_path, "prev_path":prev_path, "video_idx":video_idx}
 
