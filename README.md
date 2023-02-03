@@ -8,8 +8,8 @@
 > Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling 
 >
 > - [Penghao Wu](https://scholar.google.com/citations?user=9mssd5EAAAAJ&hl=en), [Li Chen](https://scholar.google.com/citations?user=ulZxvY0AAAAJ&hl=en&authuser=1), [Hongyang Li](https://lihongyang.info/), [Xiaosong Jia](https://jiaxiaosong1002.github.io/), [Junchi Yan](https://thinklab.sjtu.edu.cn/), [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/)
-> - [arXiv Paper](https://arxiv.org/abs/2301.01006)
-> - video | blog (coming soon!)
+> - [arXiv Paper](https://arxiv.org/abs/2301.01006) | [openreview](https://openreview.net/forum?id=X5SUR7g2vVw), ICLR 2023
+> - video | [blog](https://zhuanlan.zhihu.com/p/601456429)
 
 This repository contains the pytorch implementation for PPGeo in the paper [Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling](https://arxiv.org/abs/2301.01006). PPGeo is a fully self-supervised driving policy pre-training framework to learn from unlabeled driving videos.
 
@@ -29,21 +29,60 @@ This repository contains the pytorch implementation for PPGeo in the paper [Poli
 
 ## Get Started
 
-The code and instructions are coming soon!
+- Clone the repo and build the environment.
+
+```
+git clone https://github.com/OpenDriveLab/PPGeo.git
+cd PPGeo
+conda env create -f environment.yml --name PPGeo
+conda activate PPGeo
+```
+
+- Download the driving video dataset based on the instructions in [ACO](https://github.com/metadriverse/ACO).
+
+- Make a symlink to the dataset root.
+
+```
+ln -s DATA_ROOT data
+```
+
+- Preprocess the data.
+
+```
+python ytb_data_preprocess.py
+```
+
+## Training
+
+- First stage training.
+
+```
+python train.py --id ppgeo_stage1_log --stage 1
+```
+
+- Second stage training.
+
+```
+python train.py --id ppgeo_stage2_log --stage 2 --ckpt PATH_TO_STAGE1_CKPT
+```
 
 
 ## Citation
 
 If you find our repo or our paper useful, please use the following citation:
 
-```
-@article{wu2023PPGeo,
- title={Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling}, 
- author={Penghao Wu and Li Chen and Hongyang Li and Xiaosong Jia and Junchi Yan and Yu Qiao},
- journal={arXiv preprint arXiv:2301.01006},
- year={2023},
-}
+```bibtex
+  @inproceedings{wu2023PPGeo,
+    title={Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling},
+    author={Penghao Wu and Li Chen and Hongyang Li and Xiaosong Jia and Junchi Yan and Yu Qiao},
+    booktitle={International Conference on Learning Representations},
+    year={2023}
+  }
 ```
 
 ## License
 All code within this repository is under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+## Acknowlegement
+Our code is based on [monodepth2](https://github.com/nianticlabs/monodepth2).
+
