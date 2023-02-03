@@ -66,6 +66,27 @@ python train.py --id ppgeo_stage1_log --stage 1
 python train.py --id ppgeo_stage2_log --stage 2 --ckpt PATH_TO_STAGE1_CKPT
 ```
 
+## Downstream Tasks
+
+### Nuscenes Planning
+- Please download the [nuScenes](https://www.nuscenes.org/) dataset first
+- Make a symlink to the nuScenes dataset root.
+```
+cd nuscenes_planning
+cd data
+ln -s nuScenes_data_root nuscenes
+cd ..
+```
+- Training the planning model
+```
+python train_planning.py --pretrained_ckpt PATH_TO_STAGE2_CKPT
+```
+### Navigation & Navigation Dynamic & Reinforcement Learning
+We use the [DI-drive](https://github.com/opendilab/DI-drive) engine for IL data collection, IL training, IL evaluation, and PPO training following [ACO](https://github.com/metadriverse/ACO) with carla version 0.9.9.4. Some additional details can be found [here](https://github.com/metadriverse/ACO/issues/1#issuecomment-1210088428).
+### 
+
+### Leaderboard Town05-long
+We use the [TCP](https://github.com/OpenPerceptionX/TCP) codebase for training and evaluation with default setting. 
 
 ## Citation
 
