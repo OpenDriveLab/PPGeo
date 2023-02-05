@@ -93,6 +93,6 @@ class FuturePredictionDataset(Dataset):
 
 def resize_and_crop_image(img, resize_dims, crop):
 	# Bilinear resizing followed by cropping
-	img = img.resize(resize_dims, resample=PIL.Image.Resampling.BILINEAR)
+	img = img.resize(resize_dims, resample=PIL.Image.BILINEAR)
 	img = img.crop(crop)
 	return img

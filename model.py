@@ -220,14 +220,14 @@ class Monodepth(nn.Module):
 			self.device = inputs["color_aug", 0, 0].device
 			self.initialize()
 		with torch.no_grad():
-			features = self.depth_encoder(inputs["color", 0, 0])
+			features = self.depth_encoder(inputs["color", 0, 0], normalize=True)
 			outputs = self.depth_decoder(features)
 
 			pose_feats = {f_i: inputs["color", f_i, 0] for f_i in self.frame_ids}
 			poses_inputs1 = torch.cat([pose_feats[-1], pose_feats[0]], 1)
 			poses_inputs2 = torch.cat([pose_feats[0], pose_feats[1]], 1)
-			pose_enc1 = self.pose_encoder(poses_inputs1)
-			pose_enc2 = self.pose_encoder(poses_inputs2)
+			pose_enc1 = self.pose_encoder(poses_inputs1, normalize=True)
+			pose_enc2 = self.pose_encoder(poses_inputs2, normalize=True)
 
 			feature_pooled1 = torch.flatten(self.avg_pooling(pose_enc1[-1]), 1)
 			fl1 = self.fl(feature_pooled1)

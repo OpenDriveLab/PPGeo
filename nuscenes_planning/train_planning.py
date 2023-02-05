@@ -30,7 +30,7 @@ class PlannerEngine(pl.LightningModule):
 
 		new_state_dict = OrderedDict()
 		for key, value in ckpt.items():
-			new_key = key.replace("motionet.visual_encoder.encoder.","")
+			new_key = key.replace("motionnet.visual_encoder.encoder.","")
 			new_state_dict[new_key] = value
 		self.model.perception.load_state_dict(new_state_dict, strict = False)
 	
