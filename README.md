@@ -57,13 +57,13 @@ python ytb_data_preprocess.py
 - First stage training.
 
 ```
-python train.py --id ppgeo_stage1_log --stage 1
+python train.py --id ppgeo_stage1_log --stage 1 --epochs 30
 ```
 
 - Second stage training.
 
 ```
-python train.py --id ppgeo_stage2_log --stage 2 --ckpt PATH_TO_STAGE1_CKPT
+python train.py --id ppgeo_stage2_log --stage 2 --epochs 20 --ckpt PATH_TO_STAGE1_CKPT
 ```
 
 ## Downstream Tasks
