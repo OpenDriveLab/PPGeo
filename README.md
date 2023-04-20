@@ -20,11 +20,11 @@ This repository contains the pytorch implementation for PPGeo in the paper [Poli
 |:--------------:|:--------:|:-------:|
 --->
 
-| Model | Link |
-|:--------------:|:--------:|
-| Visual Encoder (ResNet-34) | [ckpt](https://drive.google.com/file/d/1GAeLgT3Bd_koN9bRPDU1ksMpMlWfGXbE/view?usp=sharing) |
-| DepthNet | [ckpt](https://drive.google.com/file/d/1bzRVs97KbPtfXE-1Iwe60bUD4i0JXxhh/view?usp=sharing) |
-| PoseNet | [ckpt](https://drive.google.com/file/d/1sDeuJIvfC01NFyuLFyPI3-yihQRsmLY_/view?usp=sharing) |
+| Model | Google Drive Link | BaiduYun Link |
+|:--------------:|:--------:|:--------:|
+| Visual Encoder (ResNet-34) | [ckpt](https://drive.google.com/file/d/1GAeLgT3Bd_koN9bRPDU1ksMpMlWfGXbE/view?usp=sharing) |  [ckpt](https://pan.baidu.com/s/1Fk4czTk68d4nXFcwoqTvqg) (code: itqi) | 
+| DepthNet | [ckpt](https://drive.google.com/file/d/1bzRVs97KbPtfXE-1Iwe60bUD4i0JXxhh/view?usp=sharing) | [ckpt](https://pan.baidu.com/s/17bWzWhYb9Iofr_4vX6MByw) (code: xvof)
+| PoseNet | [ckpt](https://drive.google.com/file/d/1sDeuJIvfC01NFyuLFyPI3-yihQRsmLY_/view?usp=sharing) | [ckpt](https://pan.baidu.com/s/1R2JBweG-PwX5fJ55WGvLBg) (code: fp2n) |
 
 
 ## Get Started
