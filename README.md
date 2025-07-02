@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> 🌟 Stay up to date at [opendrivelab.com](https://opendrivelab.com/#news)!
+
 <div align="center">   
   
 # PPGeo: Policy Pre-training for Autonomous Driving via Self-supervised Geometric Modeling
